@@ -4,45 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    body {
+    /* Reset default margin and padding */
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    /* Navigation styles */
     nav {
-      background-color: #333;
-      overflow: hidden;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      background-color:#333;
+      color: white;
       padding: 10px 20px;
       position: sticky;
       top: 0;
       z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-      color: white;
       font-size: 24px;
       text-decoration: none;
     }
 
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 3px 0;
+      transition: 0.4s;
+    }
+
     .nav-list {
       list-style-type: none;
-      margin: 0;
-      padding: 0;
       display: flex;
-      justify-content: space-around;
+      align-items: center;
     }
 
     .nav-list li {
-      padding: 20px;
+      margin-right: 20px;
+    }
+
+    .nav-list li:last-child {
+      margin-right: 0;
     }
 
     .nav-list li a {
       color: white;
       text-decoration: none;
-      position: relative;
       transition: color 0.3s;
     }
 
@@ -50,23 +68,39 @@
       color: #0ceb7b;
     }
 
-    .nav-list li a::before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background-color: #0ceb7b;
-      bottom: -2px;
-      left: 0;
-      transition: width 0.3s;
-    }
+    /* Media queries for responsive design */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
 
-    .nav-list li a:hover::before {
-      width: 100%;
-      left: 0;
-    }
+      .nav-list {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+      }
 
-    .description {
+      .nav-list.active {
+        display: flex;
+      }
+
+      .nav-list li {
+        margin: 0;
+        padding: 15px;
+      }
+
+      .nav-list li a {
+        display: block;
+      }
+    }
+    .logo{color:white;}
+    
+        .description {
       margin: 20px;
       text-align: justify;
     }
@@ -75,6 +109,7 @@
       font-size: 28px;
       color: #333;
       margin-bottom: 10px;
+      background-color:gold
     }
 
     .description p {
@@ -85,8 +120,8 @@
     }
 
     .highlight {
-      background-color: #f3f3f3;
-      padding: 10px;
+      font-weight:bold;
+      padding: 5px;
       border-radius: 5px;
     }
 
@@ -100,7 +135,7 @@
     footer a {
       color: white;
       text-decoration: none;
-      display: block;
+      display: inline-block;
       margin: 5px 0;
     }
 
@@ -113,12 +148,18 @@
     footer a:hover {
       color: #0ceb7b;
     }
+    
+
   </style>
-  <title>App Hub</title>
 </head>
 <body>
   <nav>
     <a class="logo" href="#">AppHub</a>
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <ul class="nav-list">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -126,7 +167,6 @@
       <li><a href="watch.html">Watch</a></li>
     </ul>
   </nav>
-  
   <div class="description">
     <h1>Welcome to Application Hub</h1>
     <p>Hey there! Ready to dive into applicational education in Math and Science? We're all about making those textbooks come alive in the real world. We're not just here to teach you what's written on the pages – we're here to show you how to use that knowledge practically.</p>
@@ -140,10 +180,10 @@
   <footer>
     <h2>Explore More</h2>
     <ul>
-      <li><a href="#">Mathematics</a></li>
-      <li><a href="#">Science</a></li>
-      <li><a href="#">Experiments</a></li>
-      <li><a href="#">Problem Solving</a></li>
+      <li><a href="math.html">Mathematics</a></li>
+      <li><a href="science.html">Science</a></li>
+      <li><a href="exp.html">Experiments</a></li>
+      <li><a href="solving.html">Problem Solving</a></li>
     </ul>
     <div class="contact">
       <h2>Contact Us</h2>
@@ -151,5 +191,14 @@
       <p>Email: example@gmail.com</p>
     </div>
   </footer>
+  
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navList = document.querySelector(".nav-list");
+
+    menuToggle.addEventListener("click", () => {
+      navList.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
