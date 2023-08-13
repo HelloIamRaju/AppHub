@@ -4,46 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Your existing styles here */
-    body {
+    /* Reset default margin and padding */
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
     }
-    
-nav {
+
+    /* Navigation styles */
+    nav {
       background-color: #333;
-      overflow: hidden;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      color: white;
       padding: 10px 20px;
       position: sticky;
       top: 0;
       z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-      color: white;
       font-size: 24px;
       text-decoration: none;
     }
 
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 3px 0;
+      transition: 0.4s;
+    }
+
     .nav-list {
       list-style-type: none;
-      margin: 0;
-      padding: 0;
       display: flex;
-      justify-content: space-around;
+      align-items: center;
     }
 
     .nav-list li {
-      padding: 20px;
+      margin-right: 20px;
+    }
+
+    .nav-list li:last-child {
+      margin-right: 0;
     }
 
     .nav-list li a {
       color: white;
       text-decoration: none;
-      position: relative;
       transition: color 0.3s;
     }
 
@@ -51,24 +68,39 @@ nav {
       color: #0ceb7b;
     }
 
-    .nav-list li a::before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background-color: #0ceb7b;
-      bottom: -2px;
-      left: 0;
-      transition: width 0.3s;
+    /* Media queries for responsive design */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
+
+      .nav-list {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .nav-list.active {
+        display: flex;
+      }
+
+      .nav-list li {
+        margin: 0;
+        padding: 15px;
+      }
+
+      .nav-list li a {
+        display: block;
+      }
     }
-
-    .nav-list li a:hover::before {
-      width: 100%;
-      left: 0;
-    }
-
-
-    .about-section {
+    .logo{color:white}
+    
+        .about-section {
       margin: 20px;
       padding: 20px;
       background-color: #f3f3f3;
@@ -115,56 +147,16 @@ nav {
       transform: scale(1.1);
     }
 
-    /* Other existing styles here */
   </style>
-  <title>App Hub</title>
-</head>
-<body>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Your existing styles here */
-
-    /* Other existing styles here */
-
-    .learn-section {
-      margin: 20px;
-    }
-
-    .topic {
-      margin: 20px;
-      padding: 20px;
-      background-color: #f3f3f3;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: transform 0.3s;
-    }
-
-    .topic:hover {
-      transform: scale(1.05);
-    }
-
-    .topic-title {
-      font-size: 24px;
-      color: #333;
-      margin-bottom: 10px;
-    }
-
-    .topic-description {
-      font-size: 16px;
-      color: #666;
-    }
-  </style>
-  <title>App Hub</title>
 </head>
 <body>
   <nav>
-    
     <a class="logo" href="#">AppHub</a>
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <ul class="nav-list">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -172,8 +164,6 @@ nav {
       <li><a href="watch.html">Watch</a></li>
     </ul>
   </nav>
-  
-
   <div class="description">
     <div class="about-section">
       <h2>About App Hub</h2>
@@ -210,18 +200,26 @@ nav {
       <img src="image4.jpg" alt="Image 4">
       <div class="image-overlay">
         <div class="image-text">Image 4 Description</div>
+      </div>
     </div>
+    <!-- Add more gallery items here -->
   </div>
-  <!-- Add more gallery items here -->
-</div>
+  
+  <script>
+    const showAboutBtn = document.querySelector('.show-about-btn');
+    const aboutContent = document.querySelector('.about-content');
 
-<script>
-  const showAboutBtn = document.querySelector('.show-about-btn');
-  const aboutContent = document.querySelector('.about-content');
+    showAboutBtn.addEventListener('click', () => {
+      aboutContent.classList.toggle('show');
+    });
+  </script>
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navList = document.querySelector(".nav-list");
 
-  showAboutBtn.addEventListener('click', () => {
-    aboutContent.classList.toggle('show');
-  });
-</script>
+    menuToggle.addEventListener("click", () => {
+      navList.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
