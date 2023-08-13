@@ -4,48 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Your existing styles here */
-
-    /* Other existing styles here */
-    body {
+    /* Reset default margin and padding */
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    /* Navigation styles */
     nav {
       background-color: #333;
-      overflow: hidden;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      color: white;
       padding: 10px 20px;
       position: sticky;
       top: 0;
       z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-      color: white;
       font-size: 24px;
       text-decoration: none;
+      color: white;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 10px;
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 3px 0;
+      transition: 0.4s;
     }
 
     .nav-list {
       list-style-type: none;
-      margin: 0;
-      padding: 0;
       display: flex;
-      justify-content: space-around;
+      align-items: center;
     }
 
     .nav-list li {
-      padding: 20px;
+      margin-right: 20px;
+    }
+
+    .nav-list li:last-child {
+      margin-right: 0;
     }
 
     .nav-list li a {
       color: white;
       text-decoration: none;
-      position: relative;
       transition: color 0.3s;
     }
 
@@ -53,22 +69,37 @@
       color: #0ceb7b;
     }
 
-    .nav-list li a::before {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background-color: #0ceb7b;
-      bottom: -2px;
-      left: 0;
-      transition: width 0.3s;
-    }
+    /* Media queries for responsive design */
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+      }
 
-    .nav-list li a:hover::before {
-      width: 100%;
-      left: 0;
-    }
+      .nav-list {
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+      }
 
+      .nav-list.active {
+        display: flex;
+      }
+
+      .nav-list li {
+        margin: 0;
+        padding: 15px;
+      }
+
+      .nav-list li a {
+        display: block;
+      }
+    }
+    
     .watch-section {
       margin: 20px;
     }
@@ -87,12 +118,15 @@
       height: 100%;
     }
   </style>
-  <title>App Hub</title>
 </head>
 <body>
   <nav>
-    <!-- Your existing navigation menu here -->
-      <a class="logo" href="#">AppHub</a>
+    <a class="logo" href="#">AppHub</a>
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <ul class="nav-list">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -100,26 +134,33 @@
       <li><a href="watch.html">Watch</a></li>
     </ul>
   </nav>
+  
   <div class="watch-section">
     <div class="topic">
       <div class="topic-title">Topic 1: Introduction to Physics</div>
       <div class="topic-description">Get a fun and engaging introduction to the world of physics through a series of educational videos.</div>
       <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/LC-94w_Pgfk" title="YouTube video player" frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="video" src="video1.mp4" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
     <div class="topic">
       <div class="topic-title">Topic 2: Exploring Chemical Reactions</div>
       <div class="topic-description">Watch captivating videos that demonstrate various chemical reactions and their real-world applications.</div>
       <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/0DRKzIfnWd8" title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe class="video" src="video2.mp4" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
     <!-- Add more topics with embedded videos here -->
   </div>
   
-  <!-- Other existing content here -->
+
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navList = document.querySelector(".nav-list");
+
+    menuToggle.addEventListener("click", () => {
+      navList.classList.toggle("active");
+    });
+  </script>
 </body>
 </html>
