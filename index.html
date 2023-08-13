@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .nav-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .nav-list li {
+      padding: 20px;
+    }
+
+    .nav-list li a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-list li a:hover {
+      color: #0ceb7b;
+    }
+
+    .nav-list li a::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #0ceb7b;
+      bottom: -2px;
+      left: 0;
+      transition: width 0.3s;
+    }
+
+    .nav-list li a:hover::before {
+      width: 100%;
+      left: 0;
+    }
+
+    .description {
+      margin: 20px;
+      text-align: justify;
+    }
+
+    .description h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .description p {
+      font-size: 18px;
+      color: #000;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .highlight {
+      background-color: #f3f3f3;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: black;
+      color: white;
+      text-align: left;
+      padding: 20px;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      margin: 5px 0;
+    }
+
+    .contact {
+      border: 2px solid white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    
+    footer a:hover {
+      color: #0ceb7b;
+    }
+  </style>
+  <title>App Hub</title>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="#">AppHub</a>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="watch.html">Watch</a></li>
+    </ul>
+  </nav>
+  
+  <div class="description">
+    <h1>Welcome to Application Hub</h1>
+    <p>Hey there! Ready to dive into applicational education in Math and Science? We're all about making those textbooks come alive in the real world. We're not just here to teach you what's written on the pages – we're here to show you how to use that knowledge practically.</p>
+    <p>Learning from textbooks is like learning to ride a bike from a manual. At <span class="highlight">Application Hub</span>, we believe in hands-on learning. We're here to help you turn formulas and theories into practical skills that you can actually use.</p>
+    <p>Ever thought math and science could be exciting? Well, here's your chance. Our resources take you on a journey from the classroom to the real world. Imagine mastering complex math problems and then tackling real-life challenges with confidence.</p>
+    <p>Science isn't just about labs and microscopes. It's about understanding the world around us. With interactive experiments and simulations, you'll see concepts in action. You'll even get to experiment virtually to witness the magic of physics, chemistry, and biology unfold.</p>
+    <p>So why stick to memorizing when you can understand and apply? Get ready for practical examples, case studies, and interactive exercises that'll have you thinking critically and solving problems like a pro.</p>
+    <p>Whether you're a student gearing up for exams or just a curious soul, Application Hub is your partner in exploration. The knowledge you gain here isn't limited to textbooks – it's knowledge that's meant to spark innovation, creativity, and change.</p>
+  </div>
+  
+  <footer>
+    <h2>Explore More</h2>
+    <ul>
+      <li><a href="#">Mathematics</a></li>
+      <li><a href="#">Science</a></li>
+      <li><a href="#">Experiments</a></li>
+      <li><a href="#">Problem Solving</a></li>
+    </ul>
+    <div class="contact">
+      <h2>Contact Us</h2>
+      <p>Location: City, Country</p>
+      <p>Email: example@gmail.com</p>
+    </div>
+  </footer>
+</body>
+</html>

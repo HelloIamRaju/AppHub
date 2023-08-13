@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .nav-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .nav-list li {
+      padding: 20px;
+    }
+
+    .nav-list li a {
+      color: white;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-list li a:hover {
+      color: #0ceb7b;
+    }
+
+    .nav-list li a::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: #0ceb7b;
+      bottom: -2px;
+      left: 0;
+      transition: width 0.3s;
+    }
+
+    .nav-list li a:hover::before {
+      width: 100%;
+      left: 0;
+    }
+
+    .learn-section {
+      margin: 20px;
+    }
+
+    .topic {
+      margin: 20px;
+      padding: 20px;
+      background-color: #f3f3f3;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .topic:hover {
+      transform: scale(1.05);
+    }
+
+    .topic-title {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .topic-description {
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+  <title>App Hub</title>
+</head>
+<body>
+  <nav>
+    <!-- Your existing navigation menu here -->
+      <a class="logo" href="#">AppHub</a>
+    <ul class="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="learn.html">Learn</a></li>
+      <li><a href="watch.html">Watch</a></li>
+    </ul>
+  </nav>
+  
+  <div class="learn-section">
+    <div class="topic">
+      <div class="topic-title">Topic 1: Introduction to Mathematics</div>
+      <div class="topic-description">Explore the fundamentals of mathematics and understand how it's used in various fields of science and technology.</div>
+    </div>
+    <div class="topic">
+      <div class="topic-title">Topic 2: Applications of Algebra</div>
+      <div class="topic-description">Discover the practical applications of algebra in solving real-world problems, from engineering to finance.</div>
+    </div>
+    <div class="topic">
+      <div class="topic-title">Topic 3: Geometry in Everyday Life</div>
+      <div class="topic-description">Learn how geometry plays a crucial role in architecture, design, and spatial understanding.</div>
+    </div>
+    <div class="topic">
+      <div class="topic-title">Topic 4: The Science of Data Analysis</div>
+      <div class="topic-description">Delve into the world of statistics and data analysis, and how it's used to draw meaningful insights.</div>
+    </div>
+    <div class="topic">
+      <div class="topic-title">Topic 5: Exploring Calculus Applications</div>
+      <div class="topic-description">See how calculus is applied in physics, engineering, and optimizing real-world scenarios.</div>
+    </div>
+    <!-- Add more topics here -->
+  </div>
+  
+  <!-- Other existing content here -->
+</body>
+</html>
