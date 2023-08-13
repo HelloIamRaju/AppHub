@@ -10,7 +10,7 @@
       padding: 0;
       box-sizing: border-box;
     }
-
+    
     /* Navigation styles */
     nav {
       background-color:#333;
@@ -35,7 +35,8 @@
       cursor: pointer;
       padding: 10px;
     }
-
+    
+    
     .bar {
       width: 25px;
       height: 3px;
@@ -43,6 +44,7 @@
       margin: 3px 0;
       transition: 0.4s;
     }
+    .bar:hover{transform:rotate(360deg)}
 
     .nav-list {
       list-style-type: none;
@@ -66,6 +68,7 @@
 
     .nav-list li a:hover {
       color: #0ceb7b;
+      transform:scale(1.1);
     }
 
     /* Media queries for responsive design */
@@ -98,23 +101,25 @@
         display: block;
       }
     }
-    .logo{color:white;}
+    .logo{color:white;font-weight:bold}
     
         .description {
       margin: 20px;
       text-align: justify;
+
     }
 
     .description h1 {
       font-size: 28px;
       color: #333;
       margin-bottom: 10px;
-      background-color:gold
+      background-color:gold;
+      display:inline-block;
     }
 
     .description p {
       font-size: 18px;
-      color: #000;
+      color:black;
       line-height: 1.5;
       margin-bottom: 20px;
     }
@@ -154,7 +159,7 @@
 </head>
 <body>
   <nav>
-    <a class="logo" href="#">AppHub</a>
+    <a class="logo" href="#">PracticalPulse</a>
     <div class="menu-toggle">
       <div class="bar"></div>
       <div class="bar"></div>
@@ -168,13 +173,13 @@
     </ul>
   </nav>
   <div class="description">
-    <h1>Welcome to Application Hub</h1>
+    <h1>Welcome to PracticalPulse</h1>
     <p>Hey there! Ready to dive into applicational education in Math and Science? We're all about making those textbooks come alive in the real world. We're not just here to teach you what's written on the pages – we're here to show you how to use that knowledge practically.</p>
-    <p>Learning from textbooks is like learning to ride a bike from a manual. At <span class="highlight">Application Hub</span>, we believe in hands-on learning. We're here to help you turn formulas and theories into practical skills that you can actually use.</p>
+    <p>Learning from textbooks is like learning to ride a bike from a manual. At <span class="highlight">PracticalPulse</span>, we believe in hands-on learning. We're here to help you turn formulas and theories into practical skills that you can actually use.</p>
     <p>Ever thought math and science could be exciting? Well, here's your chance. Our resources take you on a journey from the classroom to the real world. Imagine mastering complex math problems and then tackling real-life challenges with confidence.</p>
     <p>Science isn't just about labs and microscopes. It's about understanding the world around us. With interactive experiments and simulations, you'll see concepts in action. You'll even get to experiment virtually to witness the magic of physics, chemistry, and biology unfold.</p>
     <p>So why stick to memorizing when you can understand and apply? Get ready for practical examples, case studies, and interactive exercises that'll have you thinking critically and solving problems like a pro.</p>
-    <p>Whether you're a student gearing up for exams or just a curious soul, Application Hub is your partner in exploration. The knowledge you gain here isn't limited to textbooks – it's knowledge that's meant to spark innovation, creativity, and change.</p>
+    <p>Whether you're a student gearing up for exams or just a curious soul,PracticalPulse is your partner in exploration. The knowledge you gain here isn't limited to textbooks – it's knowledge that's meant to spark innovation, creativity, and change.</p>
   </div>
   
   <footer>
