@@ -109,7 +109,7 @@
 
     }
 
-        .description h1 {
+    .description h1 {
       font-size: 28px;
       color: #333;
       margin-bottom: 10px;
@@ -118,12 +118,12 @@
       text-align: center;
       font-size: 2rem;
     }
-
     .description p {
       font-size: 18px;
       color:black;
       line-height: 1.5;
       margin-bottom: 20px;
+      color:white;
     }
 
     .highlight {
@@ -156,12 +156,20 @@
       color: #0ceb7b;
     }
     
+    #background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
 
   </style>
 </head>
 <body>
   <nav>
-    <a class="logo" href="index.html">PracticalPulse</a>
+    <a class="logo" href="#">PracticalPulse</a>
     <div class="menu-toggle">
       <div class="bar"></div>
       <div class="bar"></div>
@@ -183,7 +191,10 @@
     <p>So why stick to memorizing when you can understand and apply? Get ready for practical examples, case studies, and interactive exercises that'll have you thinking critically and solving problems like a pro.</p>
     <p>Whether you're a student gearing up for exams or just a curious soul,PracticalPulse is your partner in exploration. The knowledge you gain here isn't limited to textbooks – it's knowledge that's meant to spark innovation, creativity, and change.</p>
   </div>
-  
+  <video autoplay muted loop id="background-video">
+  <source src="black.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
   <footer>
     <h2>Explore More</h2>
     <ul>
