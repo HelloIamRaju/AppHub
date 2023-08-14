@@ -1,179 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    /* Reset default margin and padding */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Navigation styles */
-    nav {
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 24px;
-      text-decoration: none;
-      color: white;
-    }
-
-    .menu-toggle {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      padding: 10px;
-    }
-
-    .bar {
-      width: 25px;
-      height: 3px;
-      background-color: white;
-      margin: 3px 0;
-      transition: 0.4s;
-    }
-
-    .nav-list {
-      list-style-type: none;
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-list li {
-      margin-right: 20px;
-    }
-
-    .nav-list li:last-child {
-      margin-right: 0;
-    }
-
-    .nav-list li a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .nav-list li a:hover {
-      color: #0ceb7b;
-    }
-
-    /* Media queries for responsive design */
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: flex;
-      }
-
-      .nav-list {
-        display: none;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .nav-list.active {
-        display: flex;
-      }
-
-      .nav-list li {
-        margin: 0;
-        padding: 15px;
-      }
-
-      .nav-list li a {
-        display: block;
-      }
-    }
-    
-    .watch-section {
-      margin: 20px;
-    }
-
-    .video-container {
-      position: relative;
-      overflow: hidden;
-      padding-top: 56.25%; /* 16:9 aspect ratio */
-    }
-
-    .video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-    
-    #background-video {
-          position: fixed;
-          top: 0;
-          left: 0;
-          min-width: 100%;
-          min-height: 100%;
-          z-index: -1;
-        }
-        .topic{color:white}
-  </style>
-</head>
-<body>
-  <nav>
-    <a class="logo" href="index.html">PracticalPulse</a>
-    <div class="menu-toggle">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="learn.html">Learn</a></li>
-      <li><a href="watch.html">Watch</a></li>
-    </ul>
-  </nav>
+<!DOCTYPE html> 
+ <html lang="en"> 
+ <head> 
+   <meta charset="UTF-8"> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+   <style> 
+     /* Reset default margin and padding */ 
+     * { 
+       margin: 0; 
+       padding: 0; 
+       box-sizing: border-box; 
+     } 
   
-  <div class="watch-section">
-    <div class="topic">
-      <div class="topic-title">Topic 1: Introduction to Physics</div>
-      <div class="topic-description">Get a fun and engaging introduction to the world of physics through a series of educational videos.</div>
-      <div class="video-container">
-        <iframe class="video" src="video1.mp4" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="topic">
-      <div class="topic-title">Topic 2: Exploring Chemical Reactions</div>
-      <div class="topic-description">Watch captivating videos that demonstrate various chemical reactions and their real-world applications.</div>
-      <div class="video-container">
-        <iframe class="video" src="video2.mp4" frameborder="0" allowfullscreen></iframe>
-      </div>
-    </div>
-    <!-- Add more topics with embedded videos here -->
-  </div>
-    <video autoplay muted loop id="background-video">
-      <source src="black_-_13495 (540p).mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-
-  <script>
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navList = document.querySelector(".nav-list");
-
-    menuToggle.addEventListener("click", () => {
-      navList.classList.toggle("active");
-    });
-  </script>
-</body>
-</html>
+     /* Navigation styles */ 
+     nav { 
+       background-color: #333; 
+       color: white; 
+       padding: 10px 20px; 
+       position: sticky; 
+       top: 0; 
+       z-index: 100; 
+       display: flex; 
+       justify-content: space-between; 
+       align-items: center; 
+     } 
+  
+     .logo { 
+       font-size: 24px; 
+       text-decoration: none; 
+       color: white; 
+     } 
+  
+     .menu-toggle { 
+       display: none; 
+       flex-direction: column; 
+       cursor: pointer; 
+       padding: 10px; 
+     } 
+  
+     .bar { 
+       width: 25px; 
+       height: 3px; 
+       background-color: white; 
+       margin: 3px 0; 
+       transition: 0.4s; 
+     } 
+  
+     .nav-list { 
+       list-style-type: none; 
+       display: flex; 
+       align-items: center; 
+     } 
+  
+     .nav-list li { 
+       margin-right: 20px; 
+     } 
+  
+     .nav-list li:last-child { 
+       margin-right: 0; 
+     } 
+  
+     .nav-list li a { 
+       color: white; 
+       text-decoration: none; 
+       transition: color 0.3s; 
+     } 
+  
+     .nav-list li a:hover { 
+       color: #0ceb7b; 
+     } 
+  
+     /* Media queries for responsive design */ 
+     @media (max-width: 768px) { 
+       .menu-toggle { 
+         display: flex; 
+       } 
+  
+       .nav-list { 
+         display: none; 
+         position: absolute; 
+         top: 50px; 
+         left: 0; 
+         background-color: #333; 
+         width: 100%; 
+         flex-direction: column; 
+         text-align: center; 
+       } 
+  
+       .nav-list.active { 
+         display: flex; 
+       } 
+  
+       .nav-list li { 
+         margin: 0; 
+         padding: 15px; 
+       } 
+  
+       .nav-list li a { 
+         display: block; 
+       } 
+     } 
+  
+     .watch-section { 
+       margin: 20px; 
+     } 
+  
+     .video-container { 
+       position: relative; 
+       overflow: hidden; 
+       padding-top: 56.25%; /* 16:9 aspect ratio */ 
+     } 
+  
+     .video { 
+       position: absolute; 
+       top: 0; 
+       left: 0; 
+       width: 100%; 
+       height: 100%; 
+     } 
+  
+ 
+         .topic{color:black} 
+   </style> 
+ </head> 
+ <body> 
+   <nav> 
+     <a class="logo" href="index.html">PracticalPulse</a> 
+     <div class="menu-toggle"> 
+       <div class="bar"></div> 
+       <div class="bar"></div> 
+       <div class="bar"></div> 
+     </div> 
+     <ul class="nav-list"> 
+       <li><a href="index.html">Home</a></li> 
+       <li><a href="about.html">About</a></li> 
+       <li><a href="learn.html">Learn</a></li> 
+       <li><a href="watch.html">Watch</a></li> 
+     </ul> 
+   </nav> 
+  
+   <div class="watch-section"> 
+     <div class="topic"> 
+       <div class="topic-title">Topic 1: Introduction to Physics</div> 
+       <div class="topic-description">Get a fun and engaging introduction to the world of physics through a series of educational videos.</div> 
+       <div class="video-container"> 
+         <iframe class="video" src="video1.mp4" frameborder="0" allowfullscreen></iframe> 
+       </div> 
+     </div> 
+     <div class="topic"> 
+       <div class="topic-title">Topic 2: Exploring Chemical Reactions</div> 
+       <div class="topic-description">Watch captivating videos that demonstrate various chemical reactions and their real-world applications.</div> 
+       <div class="video-container"> 
+         <iframe class="video" src="video2.mp4" frameborder="0" allowfullscreen></iframe> 
+       </div> 
+     </div> 
+     <!-- Add more topics with embedded videos here --> 
+   </div> 
+    
+   <script> 
+     const menuToggle = document.querySelector(".menu-toggle"); 
+     const navList = document.querySelector(".nav-list"); 
+  
+     menuToggle.addEventListener("click", () => { 
+       navList.classList.toggle("active"); 
+     }); 
+   </script> 
+ </body> 
+ </html>
