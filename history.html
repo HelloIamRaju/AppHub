@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color:black;
+      color:white;
+      
+    }
+    *{margin:0;padding:0}
+    nav { 
+       background-color: #333; 
+       color: white; 
+       padding: 10px 20px; 
+       position: sticky; 
+       top: 0; 
+       z-index: 100; 
+       display: flex; 
+       justify-content: space-between; 
+       align-items: center; 
+     } 
+  
+     .logo { 
+       font-size: 24px; 
+       text-decoration: none; 
+       color: white; 
+     } 
+  
+     .menu-toggle { 
+       display: none; 
+       flex-direction: column; 
+       cursor: pointer; 
+       padding: 10px; 
+     } 
+  
+     .bar { 
+       width: 25px; 
+       height: 3px; 
+       background-color: white; 
+       margin: 3px 0; 
+       transition: 0.4s; 
+     } 
+  
+     .nav-list { 
+       list-style-type: none; 
+       display: flex; 
+       align-items: center; 
+     } 
+  
+     .nav-list li { 
+       margin-right: 20px; 
+     } 
+  
+     .nav-list li:last-child { 
+       margin-right: 0; 
+     } 
+  
+     .nav-list li a { 
+       color: white; 
+       text-decoration: none; 
+       transition: color 0.3s; 
+     } 
+  
+     .nav-list li a:hover { 
+       color: #0ceb7b; 
+     } 
+  
+     /* Media queries for responsive design */ 
+     @media (max-width: 768px) { 
+       .menu-toggle { 
+         display: flex; 
+       } 
+  
+       .nav-list { 
+         display: none; 
+         position: absolute; 
+         top: 50px; 
+         left: 0; 
+         background-color: #333; 
+         width: 100%; 
+         flex-direction: column; 
+         text-align: center; 
+       } 
+  
+       .nav-list.active { 
+         display: flex; 
+       } 
+  
+       .nav-list li { 
+         margin: 0; 
+         padding: 15px; 
+       } 
+  
+       .nav-list li a { 
+         display: block; 
+       } 
+     } 
+  
+
+.container {
+      max-width: 800px;
+      font-size:18px;
+      margin: 0 auto;
+      padding: 40px;
+      text-align: center; /* Center the content */
+    }
+
+
+  .section {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s;
+      text-align: justify; /* Justify the text */
+    }
+
+
+    .fadeInUp {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .heading{align-items:center;font-weight:bold
+    ;font-size:40px;margin-bottom:30px}
+  </style>
+</head>
+<body>
+     <nav> 
+     <a class="logo" href="index.html">PracticalPulse</a> 
+     <div class="menu-toggle"> 
+       <div class="bar"></div> 
+       <div class="bar"></div> 
+       <div class="bar"></div> 
+     </div> 
+     <ul class="nav-list"> 
+       <li><a href="index.html">Home</a></li> 
+       <li><a href="about.html">About</a></li> 
+       <li><a href="learn.html">Learn</a></li> 
+       <li><a href="watch.html">Watch</a></li> 
+     </ul> 
+   </nav> 
+  
+  <div class="container">
+    <div class="heading">
+      HISTORY OF <u>MATHEMATICS</u>
+    </div>
+    <div class="section">
+      <h2>Ancient Mathematics</h2>
+      <p>Early civilizations such as the Babylonians and Egyptians made foundational contributions to mathematics. 
+        The Babylonians developed a base-60 numerical system, and the Egyptians used mathematics for practical tasks like surveying and construction.</p>
+      <img src="ancient_mathematics_image.jpg" alt="Ancient Mathematics">
+    </div>
+    
+    <div class="section">
+      <h2>Classical Mathematics</h2>
+      <p>The ancient Greeks, including Pythagoras and Euclid, laid the groundwork for geometry and number theory. 
+        Pythagoras' theorem and Euclid's axiomatic approach are classic examples from this period.</p>
+      <img src="classical_mathematics_image.jpg" alt="Classical Mathematics">
+    </div>
+    
+    <div class="section">
+      <h2>Medieval Mathematics</h2>
+      <p>During the medieval period, mathematics flourished in the Islamic world. Scholars like Al-Khwarizmi 
+        pioneered algebra and introduced the concept of algorithms. Algebraic methods were applied to solve problems in various fields.</p>
+      <img src="medieval_mathematics_image.jpg" alt="Medieval Mathematics">
+    </div>
+    
+    <div class="section">
+      <h2>Renaissance Mathematics</h2>
+      <p>The Renaissance marked a revival of interest in ancient Greek mathematics. Figures like Leonardo da 
+        Vinci and Johannes Kepler contributed to theoretical and applied mathematics. Kepler's laws of planetary motion were a breakthrough in astronomy.</p>
+      <img src="renaissance_mathematics_image.jpg" alt="Renaissance Mathematics">
+    </div>
+    
+    <div class="section">
+      <h2>17th Century Mathematics</h2>
+      <p>The 17th century brought the Scientific Revolution, with mathematicians like Newton and Leibniz developing calculus. Newton's 
+        laws of motion and universal gravitation revolutionized physics and our understanding of motion and forces.</p>
+        <img src="17th_century_mathematics_image.jpg" alt="17th Century Mathematics">
+      </div>
+      
+      <div class="section">
+        <h2>18th and 19th Century Mathematics</h2>
+        <p>The 18th and 19th centuries saw advancements in abstract algebra, number theory, and non-Euclidean 
+            geometry. Gauss contributed to number theory, and Cantor explored the concept of infinity.</p>
+        <img src="18th_19th_century_mathematics_image.jpg" alt="18th and 19th Century Mathematics">
+      </div>
+      
+      <div class="section">
+        <h2>20th Century Mathematics</h2>
+        <p>The 20th century brought abstract algebra, set theory, and formal logic to the forefront. Noether's 
+            theorem linked symmetries and conservation laws, while Turing's work laid the foundation for computer science.</p>
+        <img src="20th_century_mathematics_image.jpg" alt="20th Century Mathematics">
+      </div>
+      
+      <div class="section">
+        <h2>Modern Mathematics</h2>
+        <p>Modern mathematics includes fields like cryptography, chaos theory, and data analysis. Cryptography 
+            plays a vital role in data protection and cybersecurity.</p>
+        <img src="modern_mathematics_image.jpg" alt="Modern Mathematics">
+      </div>
+      
+    </div>
+  
+    <script>
+      const sections = document.querySelectorAll('.section');
+  
+      const fadeIn = () => {
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+          
+          if (rect.top <= viewportHeight * 0.75) {
+            section.classList.add('fadeInUp');
+          }
+        });
+      };
+  
+      window.addEventListener('scroll', fadeIn);
+      window.addEventListener('load', fadeIn);
+    </script>
+      
+     <script> 
+       const menuToggle = document.querySelector(".menu-toggle"); 
+       const navList = document.querySelector(".nav-list"); 
+    
+       menuToggle.addEventListener("click", () => { 
+         navList.classList.toggle("active"); 
+       }); 
+     </script> 
+  </body>
+  </html>
