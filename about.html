@@ -146,7 +146,14 @@
     .gallery-item:hover {
       transform: scale(1.1);
     }
-
+        #background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
   </style>
 </head>
 <body>
@@ -204,7 +211,10 @@
     </div>
     <!-- Add more gallery items here -->
   </div>
-  
+      <video autoplay muted loop id="background-video">
+      <source src="black.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   <script>
     const showAboutBtn = document.querySelector('.show-about-btn');
     const aboutContent = document.querySelector('.about-content');
