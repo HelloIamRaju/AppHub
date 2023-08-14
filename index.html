@@ -27,6 +27,7 @@
     .logo {
       font-size: 24px;
       text-decoration: none;
+    
     }
 
     .menu-toggle {
@@ -113,7 +114,7 @@
       font-size: 28px;
       color: #fff;
       margin-bottom: 10px;
-      background-color:rgba(0,0,0,0.7);
+      background-color:rgba(0,0,0,0.6);
       display:inline-block;
       text-align: center;
       font-size: 2rem;
@@ -137,6 +138,7 @@
       color: white;
       text-align: left;
       padding: 20px;
+      border:2px solid white;
     }
 
     footer a {
@@ -146,30 +148,68 @@
       margin: 5px 0;
     }
 
-    .contact {
-      border: 2px solid white;
-      padding: 10px;
-      border-radius: 5px;
-    }
     
     footer a:hover {
       color: #0ceb7b;
     }
     
-    #background-video {
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
-}
+    body{background-color:black}
+    
+      .application-section {
+      margin: 20px;
+      color:white;
+      text-align:center;
+    }
 
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    td:hover {
+      background-color:#fff;
+      transform: scale(1.03);
+      color:#000;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        font-size: 14px;
+      }
+    }
+    .history-button {
+      background-color:gold;
+      color: black;
+      border: none;
+      padding:5px 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .history-button:hover {
+      background-color:white;
+      color:black;
+    }
   </style>
 </head>
 <body>
   <nav>
-    <a class="logo" href="index.html">PracticalPulse</a>
+    <a class="logo" href="#">PracticalPulse</a>
     <div class="menu-toggle">
       <div class="bar"></div>
       <div class="bar"></div>
@@ -182,19 +222,81 @@
       <li><a href="watch.html">Watch</a></li>
     </ul>
   </nav>
-  <div class="description">
+<div class="description">
     <h1>Welcome to PracticalPulse</h1>
-    <p>Hey there! Ready to dive into applicational education in Math and Science? We're all about making those textbooks come alive in the real world. We're not just here to teach you what's written on the pages – we're here to show you how to use that knowledge practically.</p>
-    <p>Learning from textbooks is like learning to ride a bike from a manual. At <span class="highlight">PracticalPulse</span>, we believe in hands-on learning. We're here to help you turn formulas and theories into practical skills that you can actually use.</p>
-    <p>Ever thought math and science could be exciting? Well, here's your chance. Our resources take you on a journey from the classroom to the real world. Imagine mastering complex math problems and then tackling real-life challenges with confidence.</p>
-    <p>Science isn't just about labs and microscopes. It's about understanding the world around us. With interactive experiments and simulations, you'll see concepts in action. You'll even get to experiment virtually to witness the magic of physics, chemistry, and biology unfold.</p>
-    <p>So why stick to memorizing when you can understand and apply? Get ready for practical examples, case studies, and interactive exercises that'll have you thinking critically and solving problems like a pro.</p>
-    <p>Whether you're a student gearing up for exams or just a curious soul,PracticalPulse is your partner in exploration. The knowledge you gain here isn't limited to textbooks – it's knowledge that's meant to spark innovation, creativity, and change.</p>
+    <p>Hey there! Ready to conquer those tricky Math and Science challenges? PracticalPulse is here to turn textbook struggles into real-world victories. We're not just about teaching; we're about showing you how to use knowledge effectively.</p>
+    <p>Imagine facing learning hurdles as complex as solving a puzzle. PracticalPulse is like your puzzle-solving guide. We take theories and formulas, turning them into practical tools you can use confidently.</p>
+    <p>Think of this journey as leveling up from classroom theories to practical mastery. Tackle tough math problems, then handle real-world problems like a pro.</p>
+    <p>Science isn't just confined to labs; it's about understanding our surroundings. Explore interactive experiments and virtual simulations. Witness physics, chemistry, and biology in action, right before your eyes.</p>
+    <p>Don't just memorize facts, grasp their real essence. With practical examples, engaging case studies, and interactive exercises, you'll become a skilled problem-solver.</p>
+    <p>Whether you're gearing up for exams or simply curious, PracticalPulse is your partner. We're not just about textbook knowledge – we're about sparking innovation and change through hands-on learning.</p>
+</div>
+  <div class="application-section">
+    <h1>Applications of Math and Physics</h1>
+    <p class="application-description">
+      The practical applications of mathematics and physics are far-reaching, shaping various industries and technologies. Here's how fundamental topics in these subjects find real-world uses:
+    </p>
+
+    <table>
+      <tr>
+        <th>Mathematics Topics</th>
+        <th>Physics Topics</th>
+        <th>Applications</th>
+      </tr>
+      <tr>
+        <td>Calculus</td>
+        <td>Mechanics</td>
+        <td>Engineering design, motion analysis</td>
+      </tr>
+      <tr>
+        <td>Linear Algebra</td>
+        <td>Electromagnetism</td>
+        <td>Electrical circuits, magnetic systems</td>
+      </tr>
+      <tr>
+        <td>Differential Equations</td>
+        <td>Thermodynamics</td>
+        <td>Heat transfer, energy conversion</td>
+      </tr>
+      <tr>
+        <td>Statistics</td>
+        <td>Optics</td>
+        <td>Data analysis, imaging technologies</td>
+      </tr>
+      <tr>
+        <td>Probability</td>
+        <td>Fluid Dynamics</td>
+        <td>Weather prediction, aerodynamics</td>
+      </tr>
+      <tr>
+        <td>Number Theory</td>
+        <td>Quantum Mechanics</td>
+        <td>Cryptography, particle behavior</td>
+      </tr>
+      <tr>
+        <td>Geometry</td>
+        <td>Relativity</td>
+        <td>Space exploration, GPS systems</td>
+      </tr>
+      <tr>
+        <td>Linear Programming</td>
+        <td>Nuclear Physics</td>
+        <td>Resource optimization, nuclear energy</td>
+      </tr>
+      <tr>
+        <td>Graph Theory</td>
+        <td>Acoustics</td>
+        <td>Network analysis, sound engineering</td>
+      </tr>
+      <tr>
+        <td>Discrete Mathematics</td>
+        <td>Wave Phenomena</td>
+        <td>Signal processing, wave behavior</td>
+      </tr>
+      <!-- Add more rows for additional topics and applications -->
+    </table>
   </div>
-  <video autoplay muted loop id="background-video">
-  <source src="black_-_13495 (540p).mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+
   <footer>
     <h2>Explore More</h2>
     <ul>
@@ -208,6 +310,8 @@
       <p>Location: City, Country</p>
       <p>Email: example@gmail.com</p>
     </div>
+  <button class="history-button" onclick="window.location.href='history.html'">
+    History of mathematics</button>
   </footer>
   
   <script>
