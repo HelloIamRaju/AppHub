@@ -127,11 +127,20 @@
       font-size: 16px;
       color: #666;
     }
+    
+        #background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
   </style>
 </head>
 <body>
   <nav>
-    <a class="logo" href="index.html">PracticalPulse</a>
+    <a class="logo" href="#">AppHub</a>
     <div class="menu-toggle">
       <div class="bar"></div>
       <div class="bar"></div>
@@ -144,6 +153,10 @@
       <li><a href="watch.html">Watch</a></li>
     </ul>
   </nav>
+    <video autoplay muted loop id="background-video">
+      <source src="black.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   <div class="learn-section">
     <div class="topic">
       <div class="topic-title">Topic 1: Introduction to Mathematics</div>
@@ -167,6 +180,7 @@
     </div>
     <!-- Add more topics here -->
   </div>
+
   <script>
     const menuToggle = document.querySelector(".menu-toggle");
     const navList = document.querySelector(".nav-list");
