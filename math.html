@@ -282,6 +282,13 @@
  <button class="history-button" onclick="window.location.href='history.html'"> 
     History of mathematics</button> 
    </footer> 
+     <script> 
+     const menuToggle = document.querySelector(".menu-toggle"); 
+     const navList = document.querySelector(".nav-list"); 
   
+     menuToggle.addEventListener("click", () => { 
+       navList.classList.toggle("active"); 
+     }); 
+   </script> 
 </body>
 </html>
