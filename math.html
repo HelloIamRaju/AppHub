@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals of Mathematics</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+     /* Navigation styles */ 
+     nav { 
+       background-color:#333; 
+       color: white; 
+       padding: 10px 20px; 
+       position: sticky; 
+       top: 0; 
+       z-index: 100; 
+       display: flex; 
+       justify-content: space-between; 
+       align-items: center; 
+     } 
+  
+     .logo { 
+       font-size: 24px; 
+       text-decoration: none; 
+  
+     } 
+  
+     .menu-toggle { 
+       display: none; 
+       flex-direction: column; 
+       cursor: pointer; 
+       padding: 10px; 
+     } 
+  
+  
+     .bar { 
+       width: 25px; 
+       height: 3px; 
+       background-color: white; 
+       margin: 3px 0; 
+       transition: 0.4s; 
+     } 
+     .bar:hover{transform:rotate(360deg)} 
+  
+     .nav-list { 
+       list-style-type: none; 
+       display: flex; 
+       align-items: center; 
+     } 
+  
+     .nav-list li { 
+       margin-right: 20px; 
+     } 
+  
+     .nav-list li:last-child { 
+       margin-right: 0; 
+     } 
+  
+     .nav-list li a { 
+       color: white; 
+       text-decoration: none; 
+       transition: color 0.3s; 
+     } 
+  
+     .nav-list li a:hover { 
+       color: #0ceb7b; 
+       transform:scale(1.1); 
+     } 
+  
+     /* Media queries for responsive design */ 
+     @media (max-width: 768px) { 
+       .menu-toggle { 
+         display: flex; 
+       } 
+  
+       .nav-list { 
+         display: none; 
+         position: absolute; 
+         top: 50px; 
+         left: 0; 
+         background-color: #333; 
+         width: 100%; 
+         flex-direction: column; 
+         text-align: center; 
+       } 
+  
+       .nav-list.active { 
+         display: flex; 
+       } 
+  
+       .nav-list li { 
+         margin: 0; 
+         padding: 15px; 
+       } 
+  
+       .nav-list li a { 
+         display: block; 
+       } 
+     } 
+     .logo{color:white;font-weight:bold} 
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .math-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .math-section {
+            border: 2px solid gray;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .math-section:hover {
+            transform: scale(1.03);
+        }
+
+        /* Responsive font size */
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+          
+     footer { 
+       background-color: black; 
+       color: white; 
+       text-align: left; 
+       padding: 20px; 
+       border:2px solid white; 
+     } 
+  
+     footer a { 
+       color: white; 
+       text-decoration: none; 
+       display: inline-block; 
+       margin: 5px 0; 
+     } 
+  
+  
+     footer a:hover { 
+       color: #0ceb7b; 
+     } 
+     
+      .history-button { 
+       background-color:gold; 
+       color: black; 
+       border: none; 
+       padding:5px 10px; 
+       font-size: 16px; 
+       cursor: pointer; 
+       transition: background-color 0.3s; 
+     margin-top:20px; 
+     } 
+  
+     .history-button:hover { 
+       background-color:white; 
+       color:black; 
+     } 
+     
+  
+    </style>
+</head>
+<body>
+  
+     <nav> 
+     <a class="logo" href="index.html">PracticalPulse</a> 
+     <div class="menu-toggle"> 
+       <div class="bar"></div> 
+       <div class="bar"></div> 
+       <div class="bar"></div> 
+     </div> 
+     <ul class="nav-list"> 
+       <li><a href="index.html">Home</a></li> 
+       <li><a href="about.html">About</a></li> 
+       <li><a href="learn.html">Learn</a></li> 
+       <li><a href="watch.html">Watch</a></li> 
+     </ul> 
+   </nav> 
+   
+   
+    <div class="math-container">
+        <h1>Fundamentals of Mathematics</h1>
+        <p>Mathematics is the language of science and a fundamental tool for understanding the world around us. From basic arithmetic to advanced calculus, mathematics forms the backbone of various disciplines.</p>
+        
+        <!-- Basic Concepts -->
+        <div class="math-section">
+            <h2>Basic Concepts</h2>
+            <p>Mathematics begins with fundamental concepts such as numbers, counting, and basic operations like addition, subtraction, multiplication, and division. These concepts serve as the foundation for more complex mathematical ideas.</p>
+        </div>
+        
+        <!-- Arithmetic -->
+        <div class="math-section">
+            <h2>Arithmetic</h2>
+            <p>Arithmetic involves the study of basic mathematical operations. Addition is the process of combining numbers to find their total. Subtraction involves finding the difference between two numbers. Multiplication is a shortcut for repeated addition, and division divides a quantity into equal parts.</p>
+        </div>
+        
+        <!-- Algebra -->
+        <div class="math-section">
+            <h2>Algebra</h2>
+            <p>Algebra introduces variables, symbols, and equations to represent and solve problems. It's a powerful tool for solving real-world problems, analyzing patterns, and making predictions. Equations and inequalities play a key role in algebraic reasoning.</p>
+        </div>
+        
+        <!-- Geometry -->
+        <div class="math-section">
+            <h2>Geometry</h2>
+            <p>Geometry explores the properties of shapes, sizes, and space. It covers concepts such as points, lines, angles, polygons, and circles. Geometry is used in various fields, including architecture, art, and engineering.</p>
+        </div>
+        
+        <!-- Calculus -->
+        <div class="math-section">
+            <h2>Calculus</h2>
+            <p>Calculus deals with rates of change and accumulation. Differential calculus focuses on understanding how quantities change, while integral calculus involves finding areas and accumulated quantities. Calculus provides insights into motion, growth, and optimization.</p>
+        </div>
+        
+        <!-- Linear Algebra -->
+        <div class="math-section">
+            <h2>Linear Algebra</h2>
+            <p>Linear algebra studies vector spaces, linear transformations, and systems of linear equations. Vectors and matrices are fundamental concepts used to represent and solve problems related to lines, planes, and transformations.</p>
+        </div>
+        
+        <!-- Statistics -->
+        <div class="math-section">
+            <h2>Statistics</h2>
+            <p>Statistics involves collecting, analyzing, interpreting, and presenting data. It provides tools to make informed decisions in various fields. Topics include data types, measures of central tendency, variability, probability, distributions, and hypothesis testing.</p>
+        </div>
+        
+        <!-- Advanced Topics -->
+        <div class="math-section">
+            <h2>Advanced Topics</h2>
+            <p>Advanced mathematics covers a wide range of topics, including differential equations, multivariable calculus, abstract algebra, topology, and more. These areas of study delve into the intricate structures and relationships within mathematics.</p>
+        </div>
+        
+        <!-- Conclusion -->
+        <div class="math-section">
+            <h2>Conclusion</h2>
+            <p>Mathematics is a dynamic and evolving field that underlies many aspects of our lives. From basic calculations to solving complex problems, mathematics enriches our understanding of the world and empowers us to explore new frontiers of knowledge.</p>
+        </div>
+    </div>
+       <footer> 
+     <h2>Explore More</h2> 
+     <ul> 
+       <li><a href="math.html">Mathematics</a></li> 
+       <li><a href="science.html">Science</a></li> 
+       <li><a href="exp.html">Experiments</a></li> 
+       <li><a href="solving.html">Problem Solving</a></li> 
+     </ul> 
+     <div class="contact"> 
+       <h2>Contact Us</h2> 
+       <p>Location: City, Country</p> 
+       <p>Email: example@gmail.com</p> 
+     </div> 
+ <button class="history-button" onclick="window.location.href='history.html'"> 
+    History of mathematics</button> 
+   </footer> 
+  
+</body>
+</html>
