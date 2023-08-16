@@ -1,183 +1,359 @@
 <!DOCTYPE html> 
- <html lang="en"> 
- <head> 
-   <meta charset="UTF-8"> 
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-   <style> 
-     /* Reset default margin and padding */ 
-     * { 
-       margin: 0; 
-       padding: 0; 
-       box-sizing: border-box; 
-     } 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <style> 
+    /* Reset default margin and padding */ 
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    } 
   
-     /* Navigation styles */ 
-     nav { 
-       background-color: #333; 
-       color: white; 
-       padding: 10px 20px; 
-       position: sticky; 
-       top: 0; 
-       z-index: 100; 
-       display: flex; 
-       justify-content: space-between; 
-       align-items: center; 
-     } 
+    /* Navigation styles */ 
+    nav { 
+      background-color: #333; 
+      color: white; 
+      padding: 10px 20px; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+    } 
   
-     .logo { 
-       font-size: 24px; 
-       text-decoration: none; 
-     } 
+    .logo { 
+      font-size: 24px; 
+      text-decoration: none; 
+      color: white; /* Set logo color to white */ 
+    } 
   
-     .menu-toggle { 
-       display: none; 
-       flex-direction: column; 
-       cursor: pointer; 
-       padding: 10px; 
-     } 
+    .menu-toggle { 
+      display: none; 
+      flex-direction: column; 
+      cursor: pointer; 
+      padding: 10px; 
+    } 
   
-     .bar { 
-       width: 25px; 
-       height: 3px; 
-       background-color: white; 
-       margin: 3px 0; 
-       transition: 0.4s; 
-     } 
+    .bar { 
+      width: 25px; 
+      height: 3px; 
+      background-color: white; 
+      margin: 3px 0; 
+      transition: 0.4s; 
+    } 
   
-     .nav-list { 
-       list-style-type: none; 
-       display: flex; 
-       align-items: center; 
-     } 
+    .nav-list { 
+      list-style-type: none; 
+      display: flex; 
+      align-items: center; 
+    } 
   
-     .nav-list li { 
-       margin-right: 20px; 
-     } 
+    .nav-list li { 
+      margin-right: 20px; 
+    } 
   
-     .nav-list li:last-child { 
-       margin-right: 0; 
-     } 
+    .nav-list li:last-child { 
+      margin-right: 0; 
+    } 
   
-     .nav-list li a { 
-       color: white; 
-       text-decoration: none; 
-       transition: color 0.3s; 
-     } 
+    .nav-list li a { 
+      color: white; 
+      text-decoration: none; 
+      transition: color 0.3s; 
+    } 
   
-     .nav-list li a:hover { 
-       color: #0ceb7b; 
-     } 
+    .nav-list li a:hover { 
+      color: #0ceb7b; 
+    } 
   
-     /* Media queries for responsive design */ 
-     @media (max-width: 768px) { 
-       .menu-toggle { 
-         display: flex; 
-       } 
+    /* Media queries for responsive design */ 
+    @media (max-width: 768px) { 
+      .menu-toggle { 
+        display: flex; 
+      } 
   
-       .nav-list { 
-         display: none; 
-         position: absolute; 
-         top: 50px; 
-         left: 0; 
-         background-color: #333; 
-         width: 100%; 
-         flex-direction: column; 
-         text-align: center; 
-       } 
+      .nav-list { 
+        display: none; 
+        position: absolute; 
+        top: 50px; 
+        left: 0; 
+        background-color: #333; 
+        width: 100%; 
+        flex-direction: column; 
+        text-align: center; 
+      } 
   
-       .nav-list.active { 
-         display: flex; 
-       } 
+      .nav-list.active { 
+        display: flex; 
+      } 
   
-       .nav-list li { 
-         margin: 0; 
-         padding: 15px; 
-       } 
+      .nav-list li { 
+        margin: 0; 
+        padding: 15px; 
+      } 
   
-       .nav-list li a { 
-         display: block; 
-       } 
-     } 
-     .logo{color:#fff} 
-  
-         .learn-section { 
-       margin: 20px; 
-     } 
-  
-     .topic { 
-       margin: 20px; 
-       padding: 20px; 
-       background-color: #f3f3f3; 
-       border-radius: 5px; 
-       cursor: pointer; 
-       transition: transform 0.3s; 
-     } 
-  
-     .topic:hover { 
-       transform: scale(1.05); 
-     } 
-  
-     .topic-title { 
-       font-size: 24px; 
-       color: #333; 
-       margin-bottom: 10px; 
-     } 
-  
-     .topic-description { 
-       font-size: 16px; 
-       color: #666; 
-     } 
-  
-body{background-color:black}
-   </style> 
- </head> 
- <body> 
-   <nav> 
-     <a class="logo" href="index.html">PracticalPulse</a> 
-     <div class="menu-toggle"> 
-       <div class="bar"></div> 
-       <div class="bar"></div> 
-       <div class="bar"></div> 
-     </div> 
-     <ul class="nav-list"> 
-       <li><a href="index.html">Home</a></li> 
-       <li><a href="about.html">About</a></li> 
-       <li><a href="learn.html">Learn</a></li> 
-       <li><a href="watch.html">Watch</a></li> 
-     </ul> 
-   </nav> 
+      .nav-list li a { 
+        display: block; 
+      } 
+    } 
+    
+    /* Other styles */
+    body { 
+      background-color: black; 
+      color: white; /* Set text color to white */
+    }
+    
+    .learn-section { 
+      margin:20px 0px; 
+    } 
 
-   <div class="learn-section"> 
-     <div class="topic"> 
-       <div class="topic-title">Topic 1: Introduction to Mathematics</div> 
-       <div class="topic-description">Explore the fundamentals of mathematics and understand how it's used in various fields of science and technology.</div> 
-     </div> 
-     <div class="topic"> 
-       <div class="topic-title">Topic 2: Applications of Algebra</div> 
-       <div class="topic-description">Discover the practical applications of algebra in solving real-world problems, from engineering to finance.</div> 
-     </div> 
-     <div class="topic"> 
-       <div class="topic-title">Topic 3: Geometry in Everyday Life</div> 
-       <div class="topic-description">Learn how geometry plays a crucial role in architecture, design, and spatial understanding.</div> 
-     </div> 
-     <div class="topic"> 
-       <div class="topic-title">Topic 4: The Science of Data Analysis</div> 
-       <div class="topic-description">Delve into the world of statistics and data analysis, and how it's used to draw meaningful insights.</div> 
-     </div> 
-     <div class="topic"> 
-       <div class="topic-title">Topic 5: Exploring Calculus Applications</div> 
-       <div class="topic-description">See how calculus is applied in physics, engineering, and optimizing real-world scenarios.</div> 
-     </div> 
-     <!-- Add more topics here --> 
-   </div> 
+    .topic { 
+      margin: 20px; 
+      padding: 20px; 
+      background-color: #f3f3f3; 
+      border-radius: 5px; 
+      cursor: pointer; 
+      transition: transform 0.3s; 
+    } 
+
+    .topic:hover { 
+      transform: scale(1.05); 
+    } 
+
+    .topic-title { 
+      font-size: 24px; 
+      color: #333; 
+      margin-bottom: 10px; 
+      font-weight:bold
+    } 
+
+    .topic-description { 
+      font-size: 16px; 
+      color: black; 
+    } 
+.topic-description p{font-size:16px}
+    footer { 
+      background-color: black; 
+      color: white; 
+      text-align: left; 
+      padding: 20px; 
+      border: 2px solid white; 
+    } 
+
+    footer a { 
+      color: white; 
+      text-decoration: none; 
+      display: inline-block; 
+      margin: 5px 0; 
+    } 
+
+    footer a:hover { 
+      color: #0ceb7b; 
+    } 
+
+    .history-button { 
+      background-color: gold; 
+      color: black; 
+      border: none; 
+      padding: 5px 10px; 
+      font-size: 16px; 
+      cursor: pointer; 
+      transition: background-color 0.3s; 
+      margin-top: 20px; 
+    } 
+
+    .history-button:hover { 
+      background-color: white; 
+      color: black; 
+    } 
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+  }
+  th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    transition:0.3s;
+  }
+  td:hover{background-color:white;
+  color:black}
+  th {
+    background-color:gray;
+  }
+  .comparison-section {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .result {
+    font-weight: bold;
+  }
   
-   <script> 
-     const menuToggle = document.querySelector(".menu-toggle"); 
-     const navList = document.querySelector(".nav-list"); 
+  .small-image {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 20px auto;
+    transition:0.2s
+  }
+  .small-image:hover{transform:scale(1.05);
+    border:2px solid gold
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+  }
+  body p{font-size:18px}
+  </style> 
+</head> 
+<body> 
+  <nav> 
+    <a class="logo" href="index.html">PracticalPulse</a> 
+    <div class="menu-toggle"> 
+      <div class="bar"></div> 
+      <div class="bar"></div> 
+      <div class="bar"></div> 
+    </div> 
+    <ul class="nav-list"> 
+      <li><a href="index.html">Home</a></li> 
+      <li><a href="about.html">About</a></li> 
+      <li><a href="learn.html">Learn</a></li> 
+      <li><a href="watch.html">Watch</a></li> 
+    </ul> 
+  </nav> 
+
+  <div class="learn-section"> 
+    <!-- Topic 1 removed -->
+    <div class="topic"> 
+      <div class="topic-title">Topic 1: Applications of Algebra</div> 
+      <div class="topic-description">Discover the practical applications of algebra in solving real-world problems, with simple 
+    examples below.<p>1.Using Equation to solve simple business problems.</p></div> 
+    </div> 
+ <div class="container">
+  <div class="comparison-section">
+    <h2>Comparing Graphic Design Agencies Based on Prices</h2>
   
-     menuToggle.addEventListener("click", () => { 
-       navList.classList.toggle("active"); 
-     }); 
-   </script> 
- </body> 
- </html>
+    <table>
+      <tr>
+        <th>Agency</th>
+        <th>Equation</th>
+        <th>Price per Unit (x)</th>
+        <th>Base Price (c)</th>
+      </tr>
+      <tr>
+        <td>Agency A</td>
+        <td>Y1 = 15K + 500</td>
+        <td>15 RS</td>
+        <td>500 RS</td>
+      </tr>
+      <tr>
+        <td>Agency B</td>
+        <td>Y2 = 20K + 300</td>
+        <td>20 RS</td>
+        <td>300 RS</td>
+      </tr>
+    </table>
+  
+    <p>To make a wise decision, plug in the quantity you need (K) into both equations. This will give you the total prices Y1 and Y2. Let's say you need 20 units:</p>
+  
+    <table>
+      <tr>
+        <th>Agency</th>
+        <th>Total Price (Y)</th>
+      </tr>
+      <tr>
+        <td>Agency A</td>
+        <td>Y1 = 15 * 20 + 500 = 800 RS</td>
+      </tr>
+      <tr>
+        <td>Agency B</td>
+        <td>Y2 = 20 * 20 + 300 = 700 RS</td>
+      </tr>
+    </table>
+  
+    <p class="result">In this case, Agency B is more affordable. By following this approach, you can determine which agency suits your needs better.</p>
+  
+    <h3>Further Exploration:</h3>
+    <p>Now, let's dive deeper and explore specific quantities to see which agency offers better prices. We'll calculate for 1 unit, 30 units, and 200 units:</p>
+  
+    <table>
+      <tr>
+        <th>Quantity (K)</th>
+        <th>Total Price - Agency A</th>
+        <th>Total Price - Agency B</th>
+        <th>Best Option</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>515 RS</td>
+        <td>320 RS</td>
+        <td>Agency B</td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td>950 RS</td>
+        <td>900 RS</td>
+        <td>Agency B</td>
+      </tr>
+      <tr>
+        <td>200</td>
+        <td>3500 RS</td>
+        <td>4300 RS</td>
+        <td>Agency A</td>
+      </tr>
+    </table>
+  
+    <p>However, there might be a quantity where both agencies have the same cost. We can find this point by equating the equations:</p>
+    <p>Y1 = Y2<br>
+      15K + 500 = 20K + 300<br>
+      200 = 5K<br>
+      K = 40</p>
+    <p>So, at a quantity of 40 units, both agencies have the same cost.</p>
+  <p>Below is a graphical representation of the equations;</p>
+ <img class="small-image" src="graph.jpg" alt="Small Image">
+    <p>In conclusion, for quantities below 40 units, Agency A is the better choice, and for quantities above 40 units, Agency B offers better prices. By understanding and utilizing this simple equation technique, businesses can effectively model their costs and make informed decisions for various products.</p>
+  
+  </div>
+</div>
+
+    <!-- Add more topics here --> 
+  </div> 
+  <footer> 
+    <h2>Explore More</h2> 
+    <ul> 
+      <li><a href="math.html">Mathematics</a></li> 
+      <li><a href="science.html">Science</a></li> 
+      <li><a href="exp.html">Experiments</a></li> 
+      <li><a href="solving.html">Problem Solving</a></li>
+      </ul> 
+    <div class="contact"> 
+      <h2>Contact Us</h2> 
+      <p>Location: City, Country</p> 
+      <p>Email: example@gmail.com</p> 
+    </div> 
+    <button class="history-button" onclick="window.location.href='history.html'"> 
+      History of mathematics</button> 
+  </footer> 
+  <script> 
+    const menuToggle = document.querySelector(".menu-toggle"); 
+    const navList = document.querySelector(".nav-list"); 
+  
+    menuToggle.addEventListener("click", () => { 
+      navList.classList.toggle("active"); 
+    }); 
+  </script> 
+</body> 
+</html>
