@@ -120,6 +120,41 @@
   
  
          .topic{color:black} 
+         
+footer { 
+       background-color: black; 
+       color: white; 
+       text-align: left; 
+       padding: 20px; 
+       border:2px solid white; 
+     } 
+  
+     footer a { 
+       color: white; 
+       text-decoration: none; 
+       display: inline-block; 
+       margin: 5px 0; 
+     } 
+  
+  
+     footer a:hover { 
+       color: #0ceb7b; 
+     } 
+    .history-button { 
+       background-color:gold; 
+       color: black; 
+       border: none; 
+       padding:5px 10px; 
+       font-size: 16px; 
+       cursor: pointer; 
+       transition: background-color 0.3s; 
+     margin-top:20px; 
+     } 
+  
+     .history-button:hover { 
+       background-color:white; 
+       color:black; 
+     } 
    </style> 
  </head> 
  <body> 
@@ -155,7 +190,22 @@
      </div> 
      <!-- Add more topics with embedded videos here --> 
    </div> 
-    
+         <footer> 
+     <h2>Explore More</h2> 
+     <ul> 
+       <li><a href="math.html">Mathematics</a></li> 
+       <li><a href="science.html">Science</a></li> 
+       <li><a href="exp.html">Experiments</a></li> 
+       <li><a href="solving.html">Problem Solving</a></li> 
+     </ul> 
+     <div class="contact"> 
+       <h2>Contact Us</h2> 
+       <p>Location: City, Country</p> 
+       <p>Email: example@gmail.com</p> 
+     </div> 
+ <button class="history-button" onclick="window.location.href='history.html'"> 
+    History of mathematics</button> 
+   </footer> 
    <script> 
      const menuToggle = document.querySelector(".menu-toggle"); 
      const navList = document.querySelector(".nav-list"); 
